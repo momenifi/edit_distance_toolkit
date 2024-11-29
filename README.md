@@ -1,6 +1,7 @@
-# Edit distance toolkit 
+# Analyzing Text Similarity and Distortion Using Edit Distance
 ## Description
-A method offers 3 edit distance variants to find distance (as edits) between two texts. It can be used to estimate how similar or dissimilar two texts representing two dialects of language, definitions of similar concepts across different disciplines or same news from two media sources are. Additionally the method also helps to distor text (using insertion, deletion, substitution and transposition operations) with personal information. It has the following operations:
+This method calculates how similar or different two texts are by measuring the "edit distance," which counts the changes (insertions, deletions, substitutions, or transpositions) needed to transform one text into another. It includes 3 variations: simple edit distance, Levenshtein distance, and Damerau-Levenshtein distance, applied at both word and character levels. Additionally, the method can distort text by randomly applying edit operations, which is useful for anonymizing data. Social scientists can use this tool to compare definitions of concepts across disciplines, analyze variations in language between dialects, or study differences in how various media outlets report news.
+ It has the following operations:
 
 - simple edit distance between two texts (at word level)
 - simple edit distance between two texts (at character level)
@@ -12,13 +13,17 @@ A method offers 3 edit distance variants to find distance (as edits) between two
 
 The methods are defined in `utils.py` and are called on sample tweets from the notebook `text_edit_distance.ipynb`
 
-The method in plain python without any package installation and therefore, preserving the environment or the `requirements.txt` file is not required. Random seeds are defined to have predictable random numbers for reproducibility.
+The method in plain Python without any package installation and therefore, preserving the environment or the `requirements.txt` file is not required. Random seeds are defined to have predictable random numbers for reproducibility.
 
 ## Keywords
-edit distance, randomizing text, levenshtein edit distance
+edit distance, randomizing text, levenshtein edit distance, damerau-levenshtein
 
 ## Use cases
-social science researcher interested in comparing the definitions of terms e.g., reproducibility, transparency etc. across different science disciplines 
+1. Evaluating Media Reporting:
+Social scientists can compare how different media outlets report the same news story by analyzing the similarities and differences in wording, framing, and tone.
+
+2. Text Anonymization for Privacy:
+When analyzing datasets with sensitive information, researchers can use the text distortion feature to anonymize personal details without losing the overall structure of the text.
 
 ## How to use
 - run jupyter using command `jupyter lab` or `jupyter notebook`
